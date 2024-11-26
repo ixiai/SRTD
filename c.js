@@ -379,6 +379,15 @@ async function debugNextSignal(trainNo) {
     return null;
 }
 
+function test(testedSignalName) {
+    if (Object.keys(coordinates[area]).includes(testedSignalName)) {
+        drawTrain(
+            "#TEST#",
+            ...coordinates[area][testedSignalName]
+        );
+    }
+}
+
 function drawSettings() {
     function writeCoolSettingName(settingName, isSelected) {
         if (settingName === true) {
