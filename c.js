@@ -160,6 +160,8 @@ function initCnv() {
     cnv.height = screenHeight;
 
     document.body.style.overflow = 'hidden';
+
+    cnv.addEventListener("mousedown", mousedown);
 }
 
 async function initServersList() {
@@ -601,6 +603,34 @@ function keyboard(e) {
             break;
         case "arrowdown":
             changeSelectedSetting(1);
+            break;
+    }
+    if (area != setAreaTo) {
+        updateTrainDescriber();
+        area = setAreaTo;
+    }
+}
+
+function mousedown(e) {
+    let setAreaTo = area;
+    const x = e.layerX / cnv.clientWidth;
+    const y = e.layerY / cnv.clientHeight;
+    const mouseRow = Math.ceil(y * 59);
+    const mouseColumn = Math.ceil(x * 160);
+    switch (mouseRow) {
+        case 57:
+            if (mouseColumn < 21) {
+                break;
+            } else if (mouseColumn < 37) {
+                setAreaTo = "L001_KO_Zw";
+                break;
+            } else if (mouseColumn < 53) {
+                setAreaTo = "L004_Zw_Gr";
+                break;
+            } else if (mouseColumn < 69) {
+                setAreaTo = "L062_SG_Tl";
+                break;
+            }
             break;
     }
     if (area != setAreaTo) {
