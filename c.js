@@ -622,6 +622,35 @@ function mousedown(e) {
     const y = e.layerY / cnv.clientHeight;
     const mouseRow = Math.ceil(y * 59);
     const mouseColumn = Math.ceil(x * 160);
+    console.log(mouseRow, mouseColumn);
+    if (area == "Settings") {
+        switch (mouseRow) {
+            case 17:
+            case 18:
+                selectedSetting = "server";
+                break;
+            case 19:
+            case 20:
+                selectedSetting = "colour";
+                break;
+            case 21:
+            case 22:
+                selectedSetting = "drawScanLines";
+                break;
+            case 23:
+            case 24:
+                selectedSetting = "flipped";
+                break;
+        }
+        if (mouseRow >= 17 && mouseRow <= 24) {
+            if (mouseColumn < 82) {
+            } else if (mouseColumn < 86) {
+                changeSetting(-1);
+            } else if (mouseColumn < 90) {
+                changeSetting(1);
+            }
+        }
+    }
     switch (mouseRow) {
         case 57:
             if (mouseColumn < 21) {
@@ -634,6 +663,14 @@ function mousedown(e) {
                 break;
             } else if (mouseColumn < 69) {
                 setAreaTo = "L062_SG_Tl";
+                break;
+            }
+            break;
+        case 58:
+            if (mouseColumn < 21) {
+                break;
+            } else if (mouseColumn < 37) {
+                setAreaTo = "Settings";
                 break;
             }
             break;
