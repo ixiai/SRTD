@@ -19,14 +19,19 @@ var settings = {
 var selectedSetting = Object.keys(settings)[0];
 var availableSettings = {
     server: [],
-    colour: ["grn", "wht"],
+    colour: ["grn", "wht", "org", "amb", "gry", "red", "blu"],
     drawScanLines: [true, false],
     flipped: [false, true]
 };
 
 const coloursPalette = {
     "grn": ["#000", "#0F0"],
-    "wht": ["#000", "#CCC"]
+    "wht": ["#000", "#CCC"],
+    "org": ["#000", "#E73"],
+    "amb": ["#000", "#EB0"], // amber CRTs are pretty neat!
+    "gry": ["#ccc", "#000"],
+    "red": ["#000", "#F00"],
+    "blu": ["#000", "#00F"]
 }
 
 const serversListUrl = "https://panel.simrail.eu:8084/servers-open";
