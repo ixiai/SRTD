@@ -592,6 +592,9 @@ function keyboard(e) {
             setAreaTo = "L004_Zw_Gr";
             break;
         case "3":
+            setAreaTo = "L008_KG_Sd";
+            break;
+        case "3":
             setAreaTo = "L062_SG_Tl";
             break;
         case "s":
@@ -662,6 +665,9 @@ function mousedown(e) {
                 setAreaTo = "L004_Zw_Gr";
                 break;
             } else if (mouseColumn < 69) {
+                setAreaTo = "L008_KG_Sd";
+                break;
+            } else if (mouseColumn < 85) {
                 setAreaTo = "L062_SG_Tl";
                 break;
             }
