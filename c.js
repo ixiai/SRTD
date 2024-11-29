@@ -594,7 +594,7 @@ function keyboard(e) {
         case "3":
             setAreaTo = "L008_KG_Sd";
             break;
-        case "3":
+        case "4":
             setAreaTo = "L062_SG_Tl";
             break;
         case "s":
