@@ -123,7 +123,8 @@ function initCoords() {
                                 if (signalName == "undefined") {
                                     logUndefinedSignals.push([row, char]);
                                 } else {
-                                    console.warn("Signal " + signalName + " in layout " + id + " doesn't seem to exist in SimRail!");
+                                    // Todo - update signals list with new ones from SimRail 2024-12-13 update
+                                    //console.warn("Signal " + signalName + " in layout " + id + " doesn't seem to exist in SimRail!");
                                 }
                             }
                         }
@@ -384,6 +385,18 @@ async function debugNextSignal(trainNo) {
         }
     }
     return null;
+}
+
+function debugFindSignals() {
+    let signalsFound = new Set();
+    for (let record of recorded) {
+        for (let train of record.data) {
+            if (train.TrainData.SignalInFront) {
+            signalsFound.add(train.TrainData.SignalInFront.split("@")[0]);
+            }
+        }
+    }
+    return signalsFound;
 }
 
 function test(testedSignalName) {
