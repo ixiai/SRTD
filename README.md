@@ -25,7 +25,7 @@ SRTD is released under __CC-BY-NC-SA 4.0__. Feel free to modify it as you wish! 
 
 https://besentv.github.io/ - by [Rokolell](https://forum.simrail.eu/profile/9783-rokolell/)
 
-https://forum.simrail.eu/topic/9948-mon-adaptation-du-programme-srtd/ - by [RWag64](https://forum.simrail.eu/profile/1871-rwag64/)
+https://forum.simrail.eu/topic/10172-my-srtd/ - by [RWag64](https://forum.simrail.eu/profile/1871-rwag64/)
 
 
 ### Special functions
